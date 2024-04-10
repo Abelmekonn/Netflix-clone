@@ -1,0 +1,22 @@
+
+.header-outer-container{
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(148, 132 ,132);
+    z-index: 1;
+    height: 10vh;
+    background-color: transparent;
+    transition: all 0.5s;
+    transition-timing-function: ease-in;
+    background-color: rgb(19, 18, 18);
+}
+.nav_black{
+    background-color: rgb(20, 20, 20);
+}
+.header_container{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

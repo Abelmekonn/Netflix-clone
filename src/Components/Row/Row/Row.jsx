@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import './row.css'
 import movieTrailer from 'movie-trailer'
 import YouTube from 'react-youtube';
-import axios from '../../../utils/axios';
+import axios from '../../../utils/axios'
+import "./Row.css"
 const Row = ({ title, fetchUrl, isLargeRow }) => {
     const [movies, setMovie] = useState([]);
     const [trailerUrl, setTrailerUrl] = useState("");
@@ -11,7 +11,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
     useEffect(() => {
         (async () => {
             try {
-                const request = await axios.get(fetchUrl); // Pass fetchUrl directly
+                const request = await axios.get(fetchUrl);
                 setMovie(request.data.results);
             } catch (err) {
                 console.log("error", err);
@@ -27,8 +27,8 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
                 .then((url) => {
                     console.log(url)
                     const urlParams = new URLSearchParams(new URL(url).search)
-                    console.log(urlParams)
-                    console.log(urlParams.get('v'))
+                    // console.log(urlParams)
+                    // console.log(urlParams.get('v'))
                     setTrailerUrl(urlParams.get('v'));
                 })
         }

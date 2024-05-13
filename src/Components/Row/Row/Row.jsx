@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import movieTrailer from 'movie-trailer'
-import YouTube from 'react-youtube';
+import movieTrailer from 'movie-trailer';
+import YouTube from "react-youtube";
 import axios from '../../../utils/axios'
 import "./Row.css"
+
 const Row = ({ title, fetchUrl, isLargeRow }) => {
     const [movies, setMovie] = useState([]);
     const [trailerUrl, setTrailerUrl] = useState("");
-
     const base_url = "https://image.tmdb.org/t/p/original";
     useEffect(() => {
         (async () => {
